@@ -1,0 +1,1042 @@
+@import url("https://fonts.googleapis.com/css2?family=Arizonia&display=swap");
+
+:root {
+  --primarycolor: #81c2de;
+  --primarylight: #b4f5ff;
+  --primarydark: #4f92ac;
+  --white: #fffbfa;
+  --black: #191308;
+}
+
+@font-face {
+  font-family: "Arizonia";
+  src: url(/fonts/Arizonia-Regular.ttf);
+}
+
+@font-face {
+  font-family: "NeueMontreal-Regular";
+  src: url(/fonts/NeueMontreal-Regular.otf);
+}
+
+@font-face {
+  font-family: "NeueMontreal-Medium";
+  src: url(/fonts/NeueMontreal-Medium.otf);
+}
+
+@font-face {
+  font-family: "NeueMontreal-Medium-italic";
+  src: url(/fonts/NeueMontreal-MediumItalic.otf);
+}
+
+@font-face {
+  font-family: "NeueMontreal-Bold";
+  src: url(/fonts/NeueMontreal-Bold.otf);
+}
+
+@font-face {
+  font-family: "NeueMontreal-Bold-italic";
+  src: url(/fonts/NeueMontreal-BoldItalic.otf);
+}
+
+@font-face {
+  font-family: "NeueMontreal-Light";
+  src: url(/fonts/NeueMontreal-Light.otf);
+}
+
+@font-face {
+  font-family: "NeueMontreal-Light-Italic";
+  src: url(/fonts/NeueMontreal-LightItalic.otf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+html {
+  font-family: "NeueMontreal-Regular";
+  background: url(/images/laura-cleffmann-zNeHhleR3Xw-unsplash.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px 5%;
+  flex-wrap: wrap;
+}
+
+.logo {
+  font-size: 35px;
+  font-family: "ARIZONIA", cursive;
+  cursor: pointer;
+  transition: color 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
+  color: #ff497c;
+}
+
+.logo:hover {
+  color: #fffbfa;
+  transition: color 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.navlinks {
+  list-style: none;
+}
+
+.navlinks li a {
+  transition: all 0.5s ease 0s;
+  display: flex;
+  flex-direction: column;
+  font-family: "NeueMontreal-Regular";
+  text-decoration: none;
+  margin-right: 50px;
+  color: #191308;
+  font-size: 20px;
+}
+
+.navi ul:hover li a {
+  transform: scale(1.5);
+  opacity: 0.2;
+  filter: blur(5px);
+}
+
+.navi ul li a:hover {
+  transform: scale(2);
+  opacity: 1;
+  filter: blur(0);
+}
+
+.navi ul li a:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #ff497c;
+  transition: 0.5s;
+  transform-origin: right;
+  transform: scaleX(0);
+  z-index: -1;
+}
+
+.navi ul li a:hover:before {
+  transition: 0.5s;
+  transform-origin: left;
+  transform: scaleX(1);
+}
+
+.navlinks li {
+  display: inline-block;
+  padding: 0px 20px;
+}
+
+main {
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 5%;
+  flex-wrap: wrap;
+}
+
+.slogan {
+  font-size: 100px;
+  margin-top: 90px;
+  font-family: "NeueMontreal-Bold-italic";
+  cursor: pointer;
+}
+
+.anime {
+  
+}
+
+@-webkit-keyframes jackInTheBox {
+  from {
+    opacity: 0;
+    -webkit-transform: scale(0.1) rotate(30deg);
+    transform: scale(0.1) rotate(30deg);
+    -webkit-transform-origin: center bottom;
+    transform-origin: center bottom;
+  }
+
+  50% {
+    -webkit-transform: rotate(-10deg);
+    transform: rotate(-10deg);
+  }
+
+  70% {
+    -webkit-transform: rotate(3deg);
+    transform: rotate(3deg);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
+@keyframes jackInTheBox {
+  from {
+    opacity: 0;
+    -webkit-transform: scale(0.1) rotate(30deg);
+    transform: scale(0.1) rotate(30deg);
+    -webkit-transform-origin: center bottom;
+    transform-origin: center bottom;
+  }
+
+  50% {
+    -webkit-transform: rotate(-10deg);
+    transform: rotate(-10deg);
+  }
+
+  70% {
+    -webkit-transform: rotate(3deg);
+    transform: rotate(3deg);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
+.jackInTheBox {
+  -webkit-animation-name: jackInTheBox;
+  animation-name: jackInTheBox;
+}
+
+@-webkit-keyframes slideInLeft {
+  from {
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+    visibility: visible;
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+    visibility: visible;
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.slideInLeft {
+  -webkit-animation-name: slideInLeft;
+  animation-name: slideInLeft;
+}
+
+@-webkit-keyframes zoomInRight {
+  from {
+    opacity: 0;
+    -webkit-transform: scale3d(0.1, 0.1, 0.1) translate3d(1000px, 0, 0);
+    transform: scale3d(0.1, 0.1, 0.1) translate3d(1000px, 0, 0);
+    -webkit-animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+    animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  }
+
+  60% {
+    opacity: 1;
+    -webkit-transform: scale3d(0.475, 0.475, 0.475) translate3d(-10px, 0, 0);
+    transform: scale3d(0.475, 0.475, 0.475) translate3d(-10px, 0, 0);
+    -webkit-animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1);
+    animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1);
+  }
+}
+
+@keyframes zoomInRight {
+  from {
+    opacity: 0;
+    -webkit-transform: scale3d(0.1, 0.1, 0.1) translate3d(1000px, 0, 0);
+    transform: scale3d(0.1, 0.1, 0.1) translate3d(1000px, 0, 0);
+    -webkit-animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+    animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  }
+
+  60% {
+    opacity: 1;
+    -webkit-transform: scale3d(0.475, 0.475, 0.475) translate3d(-10px, 0, 0);
+    transform: scale3d(0.475, 0.475, 0.475) translate3d(-10px, 0, 0);
+    -webkit-animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1);
+    animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1);
+  }
+}
+
+.zoomInRight {
+  -webkit-animation-name: zoomInRight;
+  animation-name: zoomInRight;
+}
+
+@-webkit-keyframes slideInUp {
+  0% {
+    -webkit-transform: translateY(250px);
+    transform: translateY(250px);
+    overflow: hidden;
+    z-index: -3;
+  }
+  
+  
+
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    overflow: hidden;
+  }
+}
+
+
+@keyframes slideInUp {
+  0% {
+    -webkit-transform: translateY(250px);
+    transform: translateY(250px);
+    overflow: hidden;
+    z-index: -3;
+  }
+
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    overflow: hidden;
+  }
+}
+
+.slideInUp {
+  -webkit-animation-name: slideInUp;
+  animation-name: slideInUp;
+}
+
+.phrase {
+  font-size: 25px;
+  margin-top: 35px;
+  cursor: pointer;
+  transition: all 0.45s;
+  overflow: hidden;
+}
+
+
+
+@-webkit-keyframes typing {
+  from{width: 0;}
+  to{width: 100%;}
+}
+
+@keyframes typing {
+  from{width: 0;}
+  to{width: 100%;}
+}
+
+@-webkit-keyframes blink-caret {
+  from, to {border-color: transparent;}
+  50% {border-color: #ff497c;}
+}
+
+
+@keyframes blink-caret {
+  from, to {border-color: transparent;}
+  50% {border-color: #ff497c;}
+}
+
+.phrase .text-wrapper {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+}
+
+.phrase .letters {
+  display: inline-block;
+  line-height: 1em;
+  transform-origin: 0 0;
+}
+
+button {
+  letter-spacing: 1px;
+  background: none;
+  color: #ff497c;
+  position: relative;
+  outline: none;
+  border: none;
+  height: 50px;
+  width: 190px;
+  font-size: 15px;
+  z-index: 2;
+  -webkit-transition: 0.01s 0.23s ease-out all;
+  transition: 0.01s 0.23s ease-out all;
+  overflow: hidden;
+  margin-top: 50px;
+}
+
+button:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 55%;
+  background: #202020;
+  z-index: -1;
+  -webkit-transition: 0.3s ease-in all;
+  transition: 0.3s ease-in all;
+}
+
+button:after {
+  content: "";
+  position: absolute;
+  left: -5%;
+  top: 5%;
+  height: 90%;
+  width: 5%;
+  background: #ff497c;
+  z-index: -1;
+  -webkit-transition: 0.4s 0.02s ease-in all;
+  transition: 0.4s 0.02s ease-in all;
+}
+
+button:hover {
+  cursor: pointer;
+  color: transparent;
+}
+
+button:hover:before {
+  left: 100%;
+  width: 25%;
+}
+
+button:hover:after {
+  left: 100%;
+  width: 70%;
+}
+
+button:hover .icon-right.after:after {
+  left: -80px;
+  color: #ff497c;
+  -webkit-transition: 0.2s 0.2s ease all;
+  transition: 0.2s 0.2s ease all;
+}
+
+button:hover .icon-right.after:before {
+  left: -104px;
+  top: 14px;
+  opacity: 1.2;
+  color: #272727;
+}
+
+.icon-right {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.icon-right:after {
+  content: "\2192";
+  font-size: 24px;
+  display: inline-block;
+  position: relative;
+  top: 26px;
+  -webkit-transform: translate3D(0, -50%, 0);
+  transform: translate3D(0, -50%, 0);
+}
+
+.icon-right.after:after {
+  left: -250px;
+  color: black;
+  -webkit-transition: 0.15s 0.25s ease left, 0.5s 0.05s ease color;
+  transition: 0.15s 0.25s ease left, 0.5s 0.05s ease color;
+}
+
+.icon-right.after:before {
+  content: "Explore";
+  position: absolute;
+  left: -230px;
+  top: 14px;
+  opacity: 0;
+  -webkit-transition: 0.2s ease-in all;
+  transition: 0.2s ease-in all;
+}
+
+#particles-js {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.wrapper__links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-direction: column;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 70%;
+  top: 50%;
+  left: 60%;
+  position: fixed;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.social-link--linkedin {
+  color: #2d76b0;
+}
+
+.social-link--github {
+  color: #000;
+}
+
+.social-link--instagram {
+  color: #9a2970;
+}
+
+.social-link--dribbble {
+  color: #b53561;
+}
+
+.social-link .social-svg {
+  width: 4.8rem;
+  height: 4.8rem;
+  padding: 10px 0;
+}
+
+.social-link .social-svg .social-group__icon {
+  fill: #191308;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  margin-top: 10px;
+}
+
+.social-link .social-svg .social-group__inner-circle {
+  fill: transparent;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.social-link .social-svg .social-group__outline {
+  stroke: #191308;
+  -webkit-transform-origin: 50% 50%;
+  transform-origin: 50% 50%;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.social-link .social-svg:hover .social-group__icon,
+.social-link .social-svg:active .social-group__icon,
+.social-link .social-svg:focus .social-group__icon {
+  fill: #fffbfa;
+  -webkit-transition: all 0.45s;
+  transition: all 0.45s;
+}
+
+.social-link .social-svg:hover .social-group__inner-circle,
+.social-link .social-svg:active .social-group__inner-circle,
+.social-link .social-svg:focus .social-group__inner-circle {
+  fill: currentColor;
+  -webkit-transition: all 0.45s;
+  transition: all 0.45s;
+}
+
+.social-link .social-svg:hover .social-group__inner-circle--instagram,
+.social-link .social-svg:active .social-group__inner-circle--instagram,
+.social-link .social-svg:focus .social-group__inner-circle--instagram {
+  fill: url(#simpleInsta) !important;
+}
+
+.social-link .social-svg:hover .social-group__outline,
+.social-link .social-svg:active .social-group__outline,
+.social-link .social-svg:focus .social-group__outline {
+  stroke: currentColor;
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+  -webkit-transition: all 0.45s;
+  transition: all 0.45s;
+}
+
+.menu {
+  display: none;
+}
+
+.ham1:hover {
+  fill: #ff497c;
+  transition: all 0.45s;
+}
+
+/* Mobile Nav */
+
+.overlay {
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -webkit-transform: perspective(60rem);
+  transform: perspective(60rem);
+  position: fixed;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  height: 100%;
+  width: 0;
+  position: fixed;
+  left: 0;
+  top: 0;
+  background: url(/images/laura-cleffmann-zNeHhleR3Xw-unsplash.jpg);
+  overflow-x: hidden;
+  z-index: 3;
+  transition: all 0.5s ease 0;
+  color: black;
+}
+
+.Menu-list {
+  font-size: 30px;
+  line-height: 1.2;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-transform: rotateX(-10deg) rotateY(20deg);
+  transform: rotateX(-10deg) rotateY(20deg);
+}
+
+.Menu-list-item {
+  position: relative;
+  color: transparent;
+  cursor: pointer;
+}
+
+.Menu-list-item::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 55%;
+  left: -10%;
+  right: -10%;
+  height: 10%;
+  border-radius: 4px;
+  margin-top: -2px;
+  background: black;
+  -webkit-transform: scale(0);
+  transform: scale(0);
+  -webkit-transition: -webkit-transform 0.8s
+    cubic-bezier(0.16, 1.08, 0.38, 0.98);
+  transition: -webkit-transform 0.8s cubic-bezier(0.16, 1.08, 0.38, 0.98);
+  transition: transform 0.8s cubic-bezier(0.16, 1.08, 0.38, 0.98);
+  transition: transform 0.8s cubic-bezier(0.16, 1.08, 0.38, 0.98),
+    -webkit-transform 0.8s cubic-bezier(0.16, 1.08, 0.38, 0.98);
+  z-index: 4;
+}
+
+.Mask {
+  display: block;
+  position: absolute;
+  overflow: hidden;
+  color: black;
+  top: 0;
+  height: 59%;
+  -webkit-transition: all 0.8s cubic-bezier(0.16, 1.08, 0.38, 0.98);
+  transition: all 0.8s cubic-bezier(0.16, 1.08, 0.38, 0.98);
+}
+
+.Mask span {
+  display: block;
+}
+
+.Mask + .Mask {
+  top: 48.9%;
+  height: 51.1%;
+}
+
+.Mask + .Mask span {
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.Menu-list-item:hover .Mask,
+.Menu-list-item:active .Mask {
+  color: #ff497c;
+  -webkit-transform: skewX(12deg) translateX(5px);
+  transform: skewX(12deg) translateX(5px);
+}
+
+.Menu-list-item:hover .Mask + .Mask,
+.Menu-list-item:active .Mask + .Mask {
+  -webkit-transform: skewX(12deg) translateX(-5px);
+  transform: skewX(12deg) translateX(-5px);
+}
+
+.Menu-list-item:hover::before,
+.Menu-list-item:active::before {
+  -webkit-transform: scale(1);
+  transform: scale(1);
+}
+
+.overlay .close {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+  color: #ff497c;
+}
+
+.overlay .close:hover {
+  color: black;
+}
+
+@media screen and (max-height: 450px) {
+  .overlay a {
+    font-size: 20px;
+  }
+
+  .overlay .close {
+    font-size: 40px;
+    top: 15px;
+    right: 25px;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .navlinks {
+    display: none;
+  }
+
+  .menu {
+    display: inherit;
+  }
+}
+
+/*  SMALL Mobile Devices */
+@media only screen and (max-width: 349px) and (min-width: 120px) {
+  .slogan {
+    font-size: 55px;
+    font-family: "NeueMontreal-Bold-italic";
+    cursor: pointer;
+  }
+
+  .phrase {
+    font-size: 19px;
+    margin-top: 35px;
+    cursor: pointer;
+  }
+
+  .wrapper__links {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-direction: row;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    width: 70%;
+    top: 50%;
+    left: 0%;
+    position: relative;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+  }
+
+  .social-link .social-svg {
+    width: 3.1rem;
+    height: 3.1rem;
+    padding: 5px 15px;
+    margin-top: 200px;
+  }
+
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5% 5%;
+    flex-wrap: wrap;
+  }
+
+  html {
+    font-family: "NeueMontreal-Regular";
+    background: url(/images/laura-cleffmann-zNeHhleR3Xw-unsplash.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+}
+
+/* Mobile Devices */
+@media only screen and (max-width: 480px) and (min-width: 350px) {
+  .slogan {
+    font-size: 60px;
+    font-family: "NeueMontreal-Bold-italic";
+    cursor: pointer;
+  }
+
+  .phrase {
+    font-size: 19px;
+    margin-top: 35px;
+    cursor: pointer;
+  }
+
+  .wrapper__links {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-direction: row;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    width: 70%;
+    top: 50%;
+    left: 0%;
+    position: relative;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+  }
+
+  .social-link .social-svg {
+    width: 3.8rem;
+    height: 3.8rem;
+    padding: 10px 15px;
+    margin-top: 200px;
+  }
+
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5% 5%;
+    flex-wrap: wrap;
+  }
+
+  html {
+    font-family: "NeueMontreal-Regular";
+    background: url(/images/laura-cleffmann-zNeHhleR3Xw-unsplash.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+}
+
+/* I-PADS and Tablets */
+@media only screen and (max-width: 768px) and (min-width: 481px) {
+  .slogan {
+    font-size: 60px;
+    font-family: "NeueMontreal-Bold-italic";
+    cursor: pointer;
+  }
+
+  .phrase {
+    font-size: 19px;
+    margin-top: 35px;
+    cursor: pointer;
+  }
+
+  .wrapper__links {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-direction: row;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    width: 70%;
+    top: 50%;
+    left: 10%;
+    position: relative;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+  }
+
+  .social-link .social-svg {
+    width: 3.8rem;
+    height: 3.8rem;
+    padding: 10px 15px;
+    margin-top: 200px;
+  }
+
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5% 5%;
+    flex-wrap: wrap;
+  }
+
+  html {
+    font-family: "NeueMontreal-Regular";
+    background: url(/images/laura-cleffmann-zNeHhleR3Xw-unsplash.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+}
+
+/* Small Screen LAPTOPS */
+@media only screen and (max-width: 1024px) and (min-width: 769px) {
+  .slogan {
+    font-size: 50px;
+    font-family: "NeueMontreal-Bold-italic";
+    cursor: pointer;
+  }
+
+  .phrase {
+    font-size: 19px;
+    margin-top: 35px;
+    cursor: pointer;
+  }
+
+  .wrapper__links {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-direction: row;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    width: 70%;
+    top: 50%;
+    left: 10%;
+    position: relative;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+  }
+
+  .social-link .social-svg {
+    width: 3.8rem;
+    height: 3.8rem;
+    padding: 10px 15px;
+    margin-top: 200px;
+  }
+
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5% 5%;
+    flex-wrap: wrap;
+  }
+
+  html {
+    font-family: "NeueMontreal-Regular";
+    background: url(/images/laura-cleffmann-zNeHhleR3Xw-unsplash.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+}
+
+/* large screen LAPTOPS */
+@media only screen and (max-width: 1200px) and (min-width: 1025px) {
+  .slogan {
+    font-size: 52px;
+    font-family: "NeueMontreal-Bold-italic";
+    cursor: pointer;
+  }
+
+  .phrase {
+    font-size: 19px;
+    margin-top: 35px;
+    cursor: pointer;
+  }
+
+  .social-link .social-svg {
+    width: 3.8rem;
+    height: 3.8rem;
+    padding: 10px 15px;
+  }
+
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5% 5%;
+    flex-wrap: wrap;
+  }
+
+  html {
+    font-family: "NeueMontreal-Regular";
+    background: url(/images/laura-cleffmann-zNeHhleR3Xw-unsplash.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+}
+
+/* tvs */
+@media only screen and (max-width: 2000px) and (min-width: 1201px) {
+  .slogan {
+    font-size: 67px;
+    font-family: "NeueMontreal-Bold-italic";
+    cursor: pointer;
+  }
+
+  .phrase {
+    font-size: 19px;
+    margin-top: 35px;
+    cursor: pointer;
+  }
+
+  .social-link .social-svg {
+    width: 3.8rem;
+    height: 3.8rem;
+    padding: 10px 15px;
+  }
+
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5% 5%;
+    flex-wrap: wrap;
+  }
+
+  html {
+    font-family: "NeueMontreal-Regular";
+    background: url(/images/laura-cleffmann-zNeHhleR3Xw-unsplash.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+}
